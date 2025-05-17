@@ -1,0 +1,274 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p, blockquote {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: #f6f5f6;
+  padding: 4rem 2.1875rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  max-width: 28.125rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 2.5rem 3.75rem 3.125rem -2.9375rem rgba(72, 85, 106, 0.25);
+}
+.testimonial__author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.0625rem;
+  margin-bottom: 1rem;
+}
+.testimonial__author img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+.testimonial__author p {
+  color: inherit;
+  font-family: "Barlow Semi Condensed";
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+}
+.testimonial__author p span {
+  color: inherit;
+  font-family: "Barlow Semi Condensed";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+.testimonial__summary {
+  color: inherit;
+  font-family: "Barlow Semi Condensed";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.testimonial__quote {
+  all: unset;
+  color: inherit;
+  font-family: "Barlow Semi Condensed";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  quotes: "“" "”";
+  text-wrap: pretty;
+}
+.testimonial__quote::before {
+  content: open-quote;
+}
+.testimonial__quote::after {
+  content: close-quote;
+}
+.testimonial--purple {
+  background-color: #733fc8;
+  color: #ede4ff;
+}
+.testimonial--purple .testimonial__author span {
+  color: white;
+}
+.testimonial--purple .testimonial__author img {
+  box-shadow: 0 0 0 2px #a775f1;
+}
+.testimonial--purple .testimonial__summary {
+  color: white;
+}
+.testimonial--grey {
+  background-color: #48556a;
+  color: #e7eaee;
+}
+.testimonial--grey .testimonial__author p {
+  color: #a3aab4;
+}
+.testimonial--grey .testimonial__author p span {
+  color: white;
+}
+.testimonial--grey .testimonial__summary {
+  color: white;
+}
+.testimonial--light {
+  background-color: white;
+  color: #676d7e;
+}
+.testimonial--light .testimonial__author span {
+  color: #48556a;
+}
+.testimonial--light .testimonial__summary {
+  color: #48556a;
+}
+.testimonial--dark {
+  background-color: #19202d;
+  color: #e7eaee;
+}
+.testimonial--dark .testimonial__author {
+  color: white;
+}
+.testimonial--dark .testimonial__author img {
+  box-shadow: 0 0 0 2px #733fc8;
+}
+.testimonial--dark .testimonial__summary {
+  color: #cfcfcf;
+}
+
+:nth-child(even of .testimonial--light) .testimonial__author p {
+  color: #a3aab4;
+}
+
+@media (min-width: 48rem) {
+  body {
+    padding: 5.1875rem 3.8125rem 7.0625rem 3.75rem;
+  }
+  .dclifford {
+    grid-area: dclifford;
+  }
+  .jwalters {
+    grid-area: jwalters;
+  }
+  .jharmon {
+    grid-area: jharmon;
+  }
+  .pabrams {
+    grid-area: pabrams;
+  }
+  .kwhittle {
+    grid-area: kwhittle;
+  }
+  main {
+    grid-template-areas: "dclifford dclifford" "jwalters jharmon" "pabrams pabrams" "kwhittle kwhittle";
+    max-width: 51.25rem;
+  }
+  .testimonial--purple {
+    z-index: 0;
+    position: relative;
+  }
+  .testimonial--purple * {
+    z-index: 2;
+  }
+  .testimonial--purple::after {
+    content: "";
+    display: block;
+    width: 6.5rem;
+    height: 6.375rem;
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 58%;
+    z-index: 1;
+  }
+}
+@media (min-width: 75rem) {
+  body {
+    justify-content: center;
+    padding: 5.1875rem 0;
+  }
+  .dclifford {
+    grid-area: dclifford;
+  }
+  .jwalters {
+    grid-area: jwalters;
+  }
+  .jharmon {
+    grid-area: jharmon;
+  }
+  .pabrams {
+    grid-area: pabrams;
+  }
+  .kwhittle {
+    grid-area: kwhittle;
+  }
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+    grid-template-areas: "dclifford dclifford jwalters kwhittle" "jharmon pabrams pabrams kwhittle";
+    width: 77%;
+    max-width: 75rem;
+  }
+  .testimonial--purple {
+    z-index: 0;
+    position: relative;
+  }
+  .testimonial--purple * {
+    z-index: 2;
+  }
+  .testimonial--purple::after {
+    content: "";
+    display: block;
+    width: 6.5rem;
+    height: 6.375rem;
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    z-index: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

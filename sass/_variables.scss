@@ -1,0 +1,60 @@
+@use 'functions' as *;
+
+// colors
+$color-black: #121212;
+$color-dark-blue: #19202d;
+$color-white: #ffffff;
+$color-grey-100: #e7eaee;
+$color-grey-200: #cfcfcf;
+$color-grey-400: #676d7e;
+$color-grey-500: #48556a;
+$color-purple-300: #a775f1;
+$color-purple-50: #ede4ff;
+$color-purple-500: #733fc8;
+
+// font sizes
+$font-size-text-preset-4: 0.6875rem;
+$font-size-text-preset-2: 0.8125rem;
+$font-size-text-preset-3: 0.8125rem;
+$font-size-text-preset-1: 1.25rem;
+
+// spacings
+$spacing-50: 0.25rem;
+$spacing-100: 0.5rem;
+$spacing-200: 1rem;
+$spacing-300: 1.5rem;
+$spacing-400: 2rem;
+
+// text presets
+@mixin text-preset-1 {
+    color: inherit;
+    font-family: "Barlow Semi Condensed";
+    font-size: $font-size-text-preset-1;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+@mixin text-preset-2 {
+    color: inherit;
+    font-family: "Barlow Semi Condensed";
+    font-size: $font-size-text-preset-2;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
+@mixin text-preset-3 {
+    color: inherit;
+    font-family: "Barlow Semi Condensed";
+    font-size: $font-size-text-preset-3;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+@mixin text-preset-4 {
+    color: inherit;
+    font-family: "Barlow Semi Condensed";
+    font-size: $font-size-text-preset-4;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
