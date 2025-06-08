@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View Solution on Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [View Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-testimonials-section-made-with-grid-template-areas-BM_HSuq0U-)
 - Live Site URL: [View Live Site](https://alexander3717.github.io/TestimonialsGrid/)
 
 
